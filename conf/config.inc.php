@@ -84,6 +84,7 @@ $shadow_options['shadow_expire_days'] = -1;
 # SMD5
 # MD5
 # CRYPT
+# ARGON2
 # clear (the default)
 # auto (will check the hash of current password)
 # This option is not used with ad_mode = true
@@ -173,6 +174,9 @@ $change_sshkey = false;
 
 # What attribute should be changed by the changesshkey action?
 $change_sshkey_attribute = "sshPublicKey";
+
+# What objectClass is required for that attribute?
+$change_sshkey_objectClass = "ldapPublicKey";
 
 # Ensure the SSH Key submitted uses a type we trust
 $ssh_valid_key_types = array('ssh-rsa', 'ssh-dss', 'ecdsa-sha2-nistp256', 'ecdsa-sha2-nistp384', 'ecdsa-sha2-nistp521', 'ssh-ed25519');
